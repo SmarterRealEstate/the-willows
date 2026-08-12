@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Willows — Courtice | Register for VIP Platinum Access</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Jost:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Meta Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init','4093978017293385');fbq('track','PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=4093978017293385&ev=PageView&noscript=1"/></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:   #1c2e3b;
+      --navy2:  #152330;
+      --gold:   #89764b;
+      --gold2:  #7a6840;
+      --gold-lt: #c8b98a;
+      --white:  #ffffff;
+      --light:  #f8f5f0;
+      --light2: #ede8de;
+      --text:   #212529;
+      --muted:  #6b7280;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: var(--white);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAV ── */
+    .nav {
+      background: var(--navy);
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo { height: 52px; width: auto; }
+    .nav-cta {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--white);
+      text-decoration: none;
+      font-family: 'Jost', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.6rem 1.4rem;
+      border-radius: 2px;
+      transition: background 0.2s;
+    }
+    .nav-cta:hover { background: var(--gold2); }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: url('https://marlinspring.com/wp-content/uploads/2024/06/Designstor-22057_House-37-02B_FrontC01_st1.20_5K06-1.jpg') center/cover no-repeat;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(100deg, rgba(28,46,59,0.88) 0%, rgba(28,46,59,0.60) 55%, rgba(28,46,59,0.30) 100%);
+    }
+    .hero-content {
+      position: relative;
+      max-width: 680px;
+      padding: 5rem 2rem 5rem 6vw;
+      color: var(--white);
+    }
+    .hero-eyebrow {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold-lt);
+      margin-bottom: 1.2rem;
+      display: block;
+    }
+    .hero-logo {
+      height: 80px;
+      width: auto;
+      display: block;
+      margin-bottom: 1.8rem;
+      filter: brightness(0) invert(1);
+    }
+    .hero h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      font-weight: 500;
+      line-height: 1.1;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    .hero h1 span { color: var(--gold-lt); }
+    .hero-sub {
+      font-family: 'Jost', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 300;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.82);
+      margin-bottom: 2rem;
+      max-width: 480px;
+    }
+    .hero-price {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      color: var(--gold-lt);
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+    }
+    .hero-price strong { font-weight: 600; color: var(--white); font-size: 1.4rem; }
+    .hero-btn {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--white);
+      text-decoration: none;
+      font-family: 'Jost', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 1rem 2.4rem;
+      border-radius: 2px;
+      transition: background 0.2s;
+    }
+    .hero-btn:hover { background: var(--gold2); }
+
+    /* ── BADGE STRIP ── */
+    .badge-strip {
+      background: var(--gold);
+      padding: 0.75rem 2rem;
+      text-align: center;
+      font-family: 'Jost', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--white);
+    }
+
+    /* ── INTRO ── */
+    .intro {
+      background: var(--light);
+      padding: 5rem 2rem;
+    }
+    .intro-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .intro-text h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      font-weight: 500;
+      text-transform: uppercase;
+      color: var(--navy);
+      line-height: 1.15;
+      margin-bottom: 1.4rem;
+      letter-spacing: 0.04em;
+    }
+    .intro-text h2 span { color: var(--gold); }
+    .intro-text p {
+      font-size: 0.97rem;
+      line-height: 1.85;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+    .intro-img {
+      border-radius: 3px;
+      overflow: hidden;
+      box-shadow: 0 12px 40px rgba(28,46,59,0.15);
+    }
+    .intro-img img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* ── HIGHLIGHTS ── */
+    .highlights {
+      background: var(--navy);
+      padding: 5rem 2rem;
+    }
+    .highlights-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .highlights h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--white);
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+    .highlights-sub {
+      text-align: center;
+      font-family: 'Jost', sans-serif;
+      font-size: 0.85rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold-lt);
+      margin-bottom: 3.5rem;
+    }
+    .highlights-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+    .highlight-item {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 3px;
+      padding: 2rem 1.8rem;
+      text-align: center;
+    }
+    .highlight-icon {
+      font-size: 2rem;
+      display: block;
+      margin-bottom: 1rem;
+    }
+    .highlight-item h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--gold-lt);
+      margin-bottom: 0.6rem;
+    }
+    .highlight-item p {
+      font-size: 0.85rem;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.6);
+    }
+
+    /* ── GALLERY ── */
+    .gallery {
+      padding: 5rem 2rem;
+      background: var(--white);
+    }
+    .gallery-inner { max-width: 1100px; margin: 0 auto; }
+    .gallery-label {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.6rem;
+    }
+    .gallery h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--navy);
+      margin-bottom: 2.5rem;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 1rem;
+    }
+    .gallery-grid img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      display: block;
+      border-radius: 2px;
+    }
+    .gallery-grid img:first-child { height: 540px; grid-row: 1 / 3; }
+
+    /* ── LOCATION ── */
+    .location {
+      background: var(--light);
+      padding: 5rem 2rem;
+    }
+    .location-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .location-img { border-radius: 3px; overflow: hidden; box-shadow: 0 12px 40px rgba(28,46,59,0.12); }
+    .location-img img { width: 100%; height: 380px; object-fit: cover; display: block; }
+    .location-text h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--navy);
+      margin-bottom: 0.5rem;
+    }
+    .location-eyebrow {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+    .location-text p {
+      font-size: 0.95rem;
+      line-height: 1.85;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+    .location-features {
+      list-style: none;
+      margin-top: 1.2rem;
+    }
+    .location-features li {
+      font-size: 0.88rem;
+      color: var(--text);
+      padding: 0.5rem 0;
+      border-bottom: 1px solid var(--light2);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .location-features li::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: var(--gold);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* ── FORM ── */
+    .form-section {
+      background: var(--navy);
+      padding: 5rem 2rem;
+    }
+    .form-inner {
+      max-width: 620px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .form-eyebrow {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold-lt);
+      margin-bottom: 0.8rem;
+      display: block;
+    }
+    .form-section h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--white);
+      margin-bottom: 0.75rem;
+    }
+    .form-section p {
+      font-size: 0.92rem;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 2.5rem;
+    }
+    .form-box {
+      background: var(--white);
+      border-radius: 4px;
+      padding: 2.5rem;
+      text-align: left;
+    }
+
+    /* ── BUILDER ── */
+    .builder {
+      background: var(--light);
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .builder-inner { max-width: 700px; margin: 0 auto; }
+    .builder h3 {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+    }
+    .builder-logo {
+      height: 36px;
+      width: auto;
+      display: block;
+      margin: 0 auto 1.5rem;
+      filter: brightness(0);
+      opacity: 0.6;
+    }
+    .builder p {
+      font-size: 0.78rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy2);
+      color: rgba(255,255,255,0.45);
+      text-align: center;
+      font-size: 0.7rem;
+      line-height: 1.8;
+      padding: 2rem;
+    }
+    footer strong { color: rgba(255,255,255,0.7); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .hero-content { padding: 4rem 1.5rem; }
+      .intro-inner, .location-inner { grid-template-columns: 1fr; gap: 2rem; }
+      .highlights-grid { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: 1fr; }
+      .gallery-grid img:first-child { height: 260px; grid-row: auto; }
+      .nav-cta { display: none; }
+      .form-box { padding: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <img class="nav-logo" src="https://marlinspring.com/wp-content/uploads/2024/03/Willows-Logo.svg" alt="The Willows" onerror="this.style.display='none'">
+    <a href="#register" class="nav-cta">Register Now</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-eyebrow">Now Registering — Courtice, Ontario</span>
+      <h1>A Place to <span>Put Down Roots</span></h1>
+      <p class="hero-sub">A delightful family-friendly community by Marlin Spring Developments. Spacious semis, detached, and bungalow homes designed for the way families actually live.</p>
+      <p class="hero-price">Semis &amp; Detached — Starting from the Low <strong>$700's</strong></p>
+      <a href="#register" class="hero-btn">Register for VIP Platinum Access</a>
+    </div>
+  </section>
+
+  <!-- BADGE STRIP -->
+  <div class="badge-strip">Save Up to $130K with the HST Rebate*</div>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <div class="intro-inner">
+      <div class="intro-text">
+        <h2>Introducing<br><span>The Willows</span></h2>
+        <p>At The Willows, you'll know your neighbours by name and the friendly streets are more than just a way to get home. Homes here have been impeccably designed for functional family living — with spacious layouts, generous kitchens and flexible spaces that adapt to the rigours of active families.</p>
+        <p>Choose from contemporary semi-detached, detached, and bungalow homes, in a community that offers comfort, convenience, and genuine charm. This is neighbourhood living at its best.</p>
+      </div>
+      <div class="intro-img">
+        <img src="https://marlinspring.com/wp-content/uploads/2024/06/22057_SD-03C_LivingA01_st1.33_5K05-1-scaled.jpg" alt="The Willows — Interior">
+      </div>
+    </div>
+  </section>
+
+  <!-- HIGHLIGHTS -->
+  <section class="highlights">
+    <div class="highlights-inner">
+      <h2>Why Register Now</h2>
+      <p class="highlights-sub">VIP Platinum Priority Access</p>
+      <div class="highlights-grid">
+        <div class="highlight-item">
+          <span class="highlight-icon">🏡</span>
+          <h3>First Selection</h3>
+          <p>Choose from the best lots, elevations, and layouts before the public opening. Priority access means more options.</p>
+        </div>
+        <div class="highlight-item">
+          <span class="highlight-icon">💰</span>
+          <h3>Platinum Pricing</h3>
+          <p>Access the lowest available pricing before the general public. Plus, save up to $130K with the HST rebate.*</p>
+        </div>
+        <div class="highlight-item">
+          <span class="highlight-icon">✅</span>
+          <h3>No Extra Cost</h3>
+          <p>Our representation is completely free to you. The builder pays our fee — you get expert guidance at zero cost.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery">
+    <div class="gallery-inner">
+      <p class="gallery-label">Community Renderings</p>
+      <h2>Built for Families</h2>
+      <div class="gallery-grid">
+        <img src="https://marlinspring.com/wp-content/uploads/2024/06/MOSS-C-22057_House-SD-01C_FrontB01_st1.66_5K05.jpg" alt="The Willows — Street elevation">
+        <img src="https://marlinspring.com/wp-content/uploads/2024/06/32_08_A_CR_V2_2025_02_13-1.jpg" alt="The Willows — Home rendering">
+        <img src="https://marlinspring.com/wp-content/uploads/2024/04/Child-Reaching-For-Trees.png" alt="The Willows — Community lifestyle">
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION -->
+  <section class="location">
+    <div class="location-inner">
+      <div class="location-img">
+        <img src="https://marlinspring.com/wp-content/uploads/2024/04/Go-Train-Exterior.png" alt="Courtice GO Transit">
+      </div>
+      <div class="location-text">
+        <span class="location-eyebrow">Location</span>
+        <h2>Courtice, Ontario</h2>
+        <p>Surrounded by schools, parks, and great transit links, Courtice is the perfect blend of natural beauty and urban convenience. With close access to GO Transit and major highways, getting everywhere is easy.</p>
+        <p>Its proximity to Oshawa, Bowmanville, and surrounding townships makes it a great launch point for exceptional recreation and cultural activities — plus, it's just a stone's throw to beaches and parks.</p>
+        <ul class="location-features">
+          <li>Minutes to Courtice GO Station</li>
+          <li>Quick access to Hwy 115/35 &amp; Hwy 2</li>
+          <li>Close to top-rated schools &amp; parks</li>
+          <li>Near Oshawa &amp; Bowmanville amenities</li>
+          <li>Beaches &amp; trails nearby</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORM -->
+  <section class="form-section" id="register">
+    <div class="form-inner">
+      <span class="form-eyebrow">Limited VIP Spots Available</span>
+      <h2>Register for Priority Access</h2>
+      <p>Be first in line for floor plans, pricing, and exclusive incentives before the public launch. Our representation is always free to you.</p>
+      <div class="form-box">
+        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+        <script>
+          hbspt.forms.create({
+            region: "na1",
+            portalId: "39925421",
+            formId: "6d567b68-4e49-452b-b819-bd0a57b94fb2",
+            onFormReady: function($form) {
+              try {
+                var iframe = document.querySelector('.hs-form-iframe');
+                if (iframe && iframe.contentDocument) {
+                  var s = iframe.contentDocument.createElement('style');
+                  var css = [
+                    'body{font-family:Inter,sans-serif;}',
+                    '.hs-button{background:#89764b!important;border-color:#89764b!important;color:#fff!important;font-family:Jost,sans-serif!important;letter-spacing:0.1em!important;text-transform:uppercase!important;font-weight:600!important;}',
+                    '.hs-button:hover{background:#7a6840!important;border-color:#7a6840!important;}',
+                    '.hs-form__virality-link,.hs-form__virality-link *{display:none!important;}'
+                  ].join('');
+                  s.appendChild(iframe.contentDocument.createTextNode(css));
+                  iframe.contentDocument.head.appendChild(s);
+                }
+              } catch(e) {}
+            }
+          });
+        </script>
+      </div>
+    </div>
+  </section>
+
+  <!-- BUILDER -->
+  <div class="builder">
+    <div class="builder-inner">
+      <h3>Developed by</h3>
+      <img class="builder-logo" src="https://marlinspring.com/wp-content/themes/marlin-development/img/other/willows/marlinspring.svg" alt="Marlin Spring Developments">
+      <p>Marlin Spring Developments is a Toronto-based real estate development company committed to building exceptional communities across the GTA and Southern Ontario. The Willows reflects their dedication to thoughtful design and quality construction.</p>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <strong>We do not represent the builder directly. We represent you.</strong><br>
+    Renderings are artist's concept only. Any HST rebate references are illustrative only and depend on purchaser eligibility, applicable legislation, and third-party approvals; not all purchasers will qualify. All information, prices, specifications, floor plans, and incentives are subject to change at any time without notice. E. &amp; O.E.<br><br>
+    Jeffrey Villeneuve &nbsp;|&nbsp; Meta Realty Inc., Brokerage &nbsp;|&nbsp; info@smarterrealestate.ca &nbsp;|&nbsp; (647) 409-7653
+  </footer>
+
+</body>
+</html>
