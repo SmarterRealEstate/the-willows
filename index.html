@@ -588,6 +588,20 @@
                   ].join('');
                   s.appendChild(iframe.contentDocument.createTextNode(css));
                   iframe.contentDocument.head.appendChild(s);
+              var iframeDoc = iframe && iframe.contentDocument;
+              if (iframeDoc) {
+                var hsForm = iframeDoc.querySelector('form');
+                if (hsForm) {
+                  [['project','The Willows'],['contact_tier','Tier 6 -Social Media Lead'],['client_type','Preconstruction']].forEach(function(p) {
+                    var ex = hsForm.querySelector('input[name="' + p[0] + '"]');
+                    if (ex) { ex.value = p[1]; } else {
+                      var inp = iframeDoc.createElement('input');
+                      inp.type = 'hidden'; inp.name = p[0]; inp.value = p[1];
+                      hsForm.appendChild(inp);
+                    }
+                  });
+                }
+              }
                 }
               } catch(e) {}
             }
