@@ -462,6 +462,22 @@
       .nav-cta { display: none; }
       .form-box { padding: 1.5rem; }
     }
+  
+    /* Custom form */
+    .form-group{margin-bottom:18px;}
+    .form-group label{display:block;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.7);margin-bottom:6px;}
+    .form-group input,.form-group select{width:100%;padding:14px 16px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.25);border-radius:2px;color:#fff;font-family:inherit;font-size:15px;outline:none;}
+    .form-group input::placeholder{color:rgba(255,255,255,0.4);}
+    .form-group select option{background:#1a1a1a;color:#fff;}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+    @media(max-width:540px){.form-row{grid-template-columns:1fr;}}
+    .form-submit{width:100%;margin-top:8px;padding:18px;background:#89764b;color:#ffffff;border:2px solid #89764b;font-family:inherit;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;}
+    .form-submit:hover:not(:disabled){opacity:0.85;}
+    .form-submit:disabled{opacity:.6;cursor:not-allowed;}
+    .form-note{margin-top:12px;font-size:12px;color:rgba(255,255,255,0.45);text-align:center;}
+    .form-success{display:none;text-align:center;padding:40px 20px;}
+    .form-success h3{font-size:26px;margin-bottom:14px;}
+    .form-success p{font-size:15px;line-height:1.7;opacity:.8;}
   </style>
 </head>
 <body>
@@ -569,44 +585,59 @@
       <h2>Register for Priority Access</h2>
       <p>Be first in line for floor plans, pricing, and exclusive incentives before the public launch. Our representation is always free to you.</p>
       <div class="form-box">
-        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
-        <script>
-          hbspt.forms.create({
-            region: "na1",
-            portalId: "39925421",
-            formId: "6d567b68-4e49-452b-b819-bd0a57b94fb2",
-            onFormReady: function($form) {
-              try {
-                var iframe = document.querySelector('.hs-form-iframe');
-                if (iframe && iframe.contentDocument) {
-                  var s = iframe.contentDocument.createElement('style');
-                  var css = [
-                    'body{font-family:Inter,sans-serif;}',
-                    '.hs-button{background:#89764b!important;border-color:#89764b!important;color:#fff!important;font-family:Jost,sans-serif!important;letter-spacing:0.1em!important;text-transform:uppercase!important;font-weight:600!important;}',
-                    '.hs-button:hover{background:#7a6840!important;border-color:#7a6840!important;}',
-                    '.hs-form__virality-link,.hs-form__virality-link *{display:none!important;}label,.hs-field-desc,.hs-richtext{color:#ffffff!important;}.hs-input{background:rgba(255,255,255,0.1)!important;border:1px solid rgba(255,255,255,0.3)!important;color:#ffffff!important;}.hs-input::placeholder{color:rgba(255,255,255,0.5)!important;}select.hs-input option{color:#333!important;background:#fff!important;}.hs-error-msg{color:#ffcccc!important;}.submitted-message{color:#ffffff!important;font-size:16px!important;line-height:1.6!important;}'
-                  ].join('');
-                  s.appendChild(iframe.contentDocument.createTextNode(css));
-                  iframe.contentDocument.head.appendChild(s);
-              var iframeDoc = iframe && iframe.contentDocument;
-              if (iframeDoc) {
-                var hsForm = iframeDoc.querySelector('form');
-                if (hsForm) {
-                  [['project','The Willows'],['contact_tier','Tier 6 -Social Media Lead'],['client_type','Preconstruction']].forEach(function(p) {
-                    var ex = hsForm.querySelector('input[name="' + p[0] + '"]');
-                    if (ex) { ex.value = p[1]; } else {
-                      var inp = iframeDoc.createElement('input');
-                      inp.type = 'hidden'; inp.name = p[0]; inp.value = p[1];
-                      hsForm.appendChild(inp);
-                    }
-                  });
-                }
-              }
-                }
-              } catch(e) {}
-            }
-          });
-        </script>
+        <form id="regForm">
+  <div class="form-row">
+    <div class="form-group"><label for="fn">First Name *</label><input type="text" id="fn" placeholder="Jane" required></div>
+    <div class="form-group"><label for="ln">Last Name *</label><input type="text" id="ln" placeholder="Smith" required></div>
+  </div>
+  <div class="form-group"><label for="ph">Phone Number</label><input type="tel" id="ph" placeholder="(416) 555-0100"></div>
+  <div class="form-group"><label for="em">Email *</label><input type="email" id="em" placeholder="jane@example.com" required></div>
+  <div class="form-group"><label for="rt">Are you a Realtor? *</label>
+    <select id="rt" required><option value="" disabled selected>Select one</option><option value="Yes">Yes</option><option value="No">No</option></select>
+  </div>
+  <button type="submit" class="form-submit" id="submitBtn">Register for VIP Platinum Access</button>
+  <p class="form-note">By submitting you consent to receive communications about this project. Your information is kept private and will never be shared.</p>
+</form>
+<div class="form-success" id="formSuccess">
+  <h3>You're on the VIP List!</h3>
+  <p>We'll be in touch with priority floor plans, pricing, and exclusive incentives reserved for VIP Platinum registrants.</p>
+</div>
+<script>
+const HS_PORTAL = '39925421';
+const HS_FORM   = '6d567b68-4e49-452b-b819-bd0a57b94fb2';
+const HS_TAGS = { lifecyclestage:'lead', contact_tier:'Tier 6 -Social Media Lead', client_type:'Preconstruction', project:'The Willows' };
+
+document.getElementById('regForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const btn = document.getElementById('submitBtn');
+  btn.textContent = 'Submitting...'; btn.disabled = true;
+  const payload = {
+    fields: [
+      {name:'firstname', value:document.getElementById('fn').value.trim()},
+      {name:'lastname',  value:document.getElementById('ln').value.trim()},
+      {name:'phone',     value:document.getElementById('ph').value.trim()},
+      {name:'email',     value:document.getElementById('em').value.trim()},
+      {name:'are_you_a_realtor_', value:document.getElementById('rt').value},
+      {name:'lifecyclestage', value:HS_TAGS.lifecyclestage},
+      {name:'contact_tier',  value:HS_TAGS.contact_tier},
+      {name:'client_type',   value:HS_TAGS.client_type},
+      {name:'project',       value:HS_TAGS.project},
+    ],
+    context: {pageUri: window.location.href, pageName: document.title}
+  };
+  try {
+    const res = await fetch('https://api.hsforms.com/submissions/v3/integration/submit/39925421/6d567b68-4e49-452b-b819-bd0a57b94fb2',
+      {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(payload)});
+    if (!res.ok) throw new Error((await res.json()).message || 'Submission failed');
+    if (typeof fbq !== 'undefined') fbq('track', 'Lead', {content_name:'The Willows VIP Registration'});
+    document.getElementById('regForm').style.display = 'none';
+    document.getElementById('formSuccess').style.display = 'block';
+  } catch(err) {
+    console.error(err);
+    btn.textContent = 'Something went wrong. Please try again.'; btn.disabled = false;
+  }
+});
+</script>
       </div>
     </div>
   </section>
