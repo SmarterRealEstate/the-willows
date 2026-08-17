@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Willows â Courtice | Register for VIP Platinum Access</title>
+  <title>The Willows &mdash; Courtice | Register for VIP Platinum Access</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Jost:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -42,7 +42,7 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* ââ NAV ââ */
+    /* ── NAV ── */
     .nav {
       background: var(--navy);
       padding: 1rem 2rem;
@@ -50,7 +50,7 @@
       align-items: center;
       justify-content: space-between;
     }
-    .nav-logo { height: 52px; width: auto; filter: brightness(0) invert(1) drop-shadow(0 1px 3px rgba(0,0,0,0.6)); }
+    .nav-logo { height: 52px; width: auto; }
     .nav-cta {
       display: inline-block;
       background: var(--gold);
@@ -67,7 +67,7 @@
     }
     .nav-cta:hover { background: var(--gold2); }
 
-    /* ââ HERO ââ */
+    /* ── HERO ── */
     .hero {
       position: relative;
       min-height: 88vh;
@@ -153,7 +153,7 @@
     }
     .hero-btn:hover { background: var(--gold2); }
 
-    /* ââ BADGE STRIP ââ */
+    /* ── BADGE STRIP ── */
     .badge-strip {
       background: var(--gold);
       padding: 0.75rem 2rem;
@@ -166,7 +166,7 @@
       color: var(--white);
     }
 
-    /* ââ INTRO ââ */
+    /* ── INTRO ── */
     .intro {
       background: var(--light);
       padding: 5rem 2rem;
@@ -208,7 +208,7 @@
       display: block;
     }
 
-    /* ââ HIGHLIGHTS ââ */
+    /* ── HIGHLIGHTS ── */
     .highlights {
       background: var(--navy);
       padding: 5rem 2rem;
@@ -268,7 +268,7 @@
       color: rgba(255,255,255,0.6);
     }
 
-    /* ââ GALLERY ââ */
+    /* ── GALLERY ── */
     .gallery {
       padding: 5rem 2rem;
       background: var(--white);
@@ -307,7 +307,7 @@
     }
     .gallery-grid img:first-child { height: 540px; grid-row: 1 / 3; }
 
-    /* ââ LOCATION ââ */
+    /* ── LOCATION ── */
     .location {
       background: var(--light);
       padding: 5rem 2rem;
@@ -369,7 +369,7 @@
       flex-shrink: 0;
     }
 
-    /* ââ FORM ââ */
+    /* ── FORM ── */
     .form-section {
       background: var(--navy);
       padding: 5rem 2rem;
@@ -411,7 +411,7 @@
       text-align: left;
     }
 
-    /* ââ BUILDER ââ */
+    /* ── BUILDER ── */
     .builder {
       background: var(--light);
       padding: 4rem 2rem;
@@ -441,7 +441,7 @@
       line-height: 1.6;
     }
 
-    /* ââ FOOTER ââ */
+    /* ── FOOTER ── */
     footer {
       background: var(--navy2);
       color: rgba(255,255,255,0.45);
@@ -452,7 +452,7 @@
     }
     footer strong { color: rgba(255,255,255,0.7); }
 
-    /* ââ RESPONSIVE ââ */
+    /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
       .hero-content { padding: 4rem 1.5rem; }
       .intro-inner, .location-inner { grid-template-columns: 1fr; gap: 2rem; }
@@ -463,21 +463,21 @@
       .form-box { padding: 1.5rem; }
     }
   
-    /* Custom form */
+    /* Custom form &mdash; light theme (white card) */
     .form-group{margin-bottom:18px;}
-    .form-group label{display:block;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.7);margin-bottom:6px;}
-    .form-group input,.form-group select{width:100%;padding:14px 16px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.25);border-radius:2px;color:#fff;font-family:inherit;font-size:15px;outline:none;}
-    .form-group input::placeholder{color:rgba(255,255,255,0.4);}
-    .form-group select option{background:#1a1a1a;color:#fff;}
+    .form-group label{display:block;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#4a5568;margin-bottom:6px;}
+    .form-group input,.form-group select{width:100%;padding:14px 16px;background:#f9f8f6;border:1px solid #d1c9b8;border-radius:2px;color:#212529;font-family:inherit;font-size:15px;outline:none;}
+    .form-group input::placeholder{color:#9ca3af;}
+    .form-group select option{background:#fff;color:#212529;}
     .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
     @media(max-width:540px){.form-row{grid-template-columns:1fr;}}
     .form-submit{width:100%;margin-top:8px;padding:18px;background:#89764b;color:#ffffff;border:2px solid #89764b;font-family:inherit;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;}
     .form-submit:hover:not(:disabled){opacity:0.85;}
     .form-submit:disabled{opacity:.6;cursor:not-allowed;}
-    .form-note{margin-top:12px;font-size:12px;color:rgba(255,255,255,0.45);text-align:center;}
+    .form-note{margin-top:12px;font-size:12px;color:#9ca3af;text-align:center;}
     .form-success{display:none;text-align:center;padding:40px 20px;}
-    .form-success h3{font-size:26px;margin-bottom:14px;color:#fff;}
-    .form-success p{font-size:15px;line-height:1.7;color:rgba(255,255,255,0.8);}
+    .form-success h3{font-size:26px;margin-bottom:14px;color:#1c2e3b;}
+    .form-success p{font-size:15px;line-height:1.7;color:#4a5568;}
   </style>
 </head>
 <body>
@@ -493,10 +493,10 @@
     <div class="hero-bg"></div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <span class="hero-eyebrow">Now Registering â Courtice, Ontario</span>
+      <span class="hero-eyebrow">Now Registering &mdash; Courtice, Ontario</span>
       <h1>A Place to <span>Put Down Roots</span></h1>
       <p class="hero-sub">A delightful family-friendly community by Marlin Spring Developments. Spacious semis, detached, and bungalow homes designed for the way families actually live.</p>
-      <p class="hero-price">Semis &amp; Detached â Starting from the Low <strong>$700's</strong></p>
+      <p class="hero-price">Semis &amp; Detached &mdash; Starting from the Low <strong>$700's</strong></p>
       <a href="#register" class="hero-btn">Register for VIP Platinum Access</a>
     </div>
   </section>
@@ -509,11 +509,11 @@
     <div class="intro-inner">
       <div class="intro-text">
         <h2>Introducing<br><span>The Willows</span></h2>
-        <p>At The Willows, you'll know your neighbours by name and the friendly streets are more than just a way to get home. Homes here have been impeccably designed for functional family living â with spacious layouts, generous kitchens and flexible spaces that adapt to the rigours of active families.</p>
+        <p>At The Willows, you'll know your neighbours by name and the friendly streets are more than just a way to get home. Homes here have been impeccably designed for functional family living &mdash; with spacious layouts, generous kitchens and flexible spaces that adapt to the rigours of active families.</p>
         <p>Choose from contemporary semi-detached, detached, and bungalow homes, in a community that offers comfort, convenience, and genuine charm. This is neighbourhood living at its best.</p>
       </div>
       <div class="intro-img">
-        <img src="https://marlinspring.com/wp-content/uploads/2024/06/22057_SD-03C_LivingA01_st1.33_5K05-1-scaled.jpg" alt="The Willows â Interior">
+        <img src="https://marlinspring.com/wp-content/uploads/2024/06/22057_SD-03C_LivingA01_st1.33_5K05-1-scaled.jpg" alt="The Willows &mdash; Interior">
       </div>
     </div>
   </section>
@@ -525,19 +525,19 @@
       <p class="highlights-sub">VIP Platinum Priority Access</p>
       <div class="highlights-grid">
         <div class="highlight-item">
-          <span class="highlight-icon">ð¡</span>
+          <span class="highlight-icon">🏡</span>
           <h3>First Selection</h3>
           <p>Choose from the best lots, elevations, and layouts before the public opening. Priority access means more options.</p>
         </div>
         <div class="highlight-item">
-          <span class="highlight-icon">ð°</span>
+          <span class="highlight-icon">💰</span>
           <h3>Platinum Pricing</h3>
           <p>Access the lowest available pricing before the general public. Plus, save up to $130K with the HST rebate.*</p>
         </div>
         <div class="highlight-item">
-          <span class="highlight-icon">â</span>
+          <span class="highlight-icon">✅</span>
           <h3>No Extra Cost</h3>
-          <p>Our representation is completely free to you. The builder pays our fee â you get expert guidance at zero cost.</p>
+          <p>Our representation is completely free to you. The builder pays our fee &mdash; you get expert guidance at zero cost.</p>
         </div>
       </div>
     </div>
@@ -549,9 +549,9 @@
       <p class="gallery-label">Community Renderings</p>
       <h2>Built for Families</h2>
       <div class="gallery-grid">
-        <img src="https://marlinspring.com/wp-content/uploads/2024/06/MOSS-C-22057_House-SD-01C_FrontB01_st1.66_5K05.jpg" alt="The Willows â Street elevation">
-        <img src="https://marlinspring.com/wp-content/uploads/2024/06/32_08_A_CR_V2_2025_02_13-1.jpg" alt="The Willows â Home rendering">
-        <img src="https://marlinspring.com/wp-content/uploads/2024/04/Child-Reaching-For-Trees.png" alt="The Willows â Community lifestyle">
+        <img src="https://marlinspring.com/wp-content/uploads/2024/06/MOSS-C-22057_House-SD-01C_FrontB01_st1.66_5K05.jpg" alt="The Willows &mdash; Street elevation">
+        <img src="https://marlinspring.com/wp-content/uploads/2024/06/32_08_A_CR_V2_2025_02_13-1.jpg" alt="The Willows &mdash; Home rendering">
+        <img src="https://marlinspring.com/wp-content/uploads/2024/04/Child-Reaching-For-Trees.png" alt="The Willows &mdash; Community lifestyle">
       </div>
     </div>
   </section>
@@ -566,7 +566,7 @@
         <span class="location-eyebrow">Location</span>
         <h2>Courtice, Ontario</h2>
         <p>Surrounded by schools, parks, and great transit links, Courtice is the perfect blend of natural beauty and urban convenience. With close access to GO Transit and major highways, getting everywhere is easy.</p>
-        <p>Its proximity to Oshawa, Bowmanville, and surrounding townships makes it a great launch point for exceptional recreation and cultural activities â plus, it's just a stone's throw to beaches and parks.</p>
+        <p>Its proximity to Oshawa, Bowmanville, and surrounding townships makes it a great launch point for exceptional recreation and cultural activities &mdash; plus, it's just a stone's throw to beaches and parks.</p>
         <ul class="location-features">
           <li>Minutes to Courtice GO Station</li>
           <li>Quick access to Hwy 115/35 &amp; Hwy 2</li>
